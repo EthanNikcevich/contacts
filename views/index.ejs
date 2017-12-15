@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  May Node and Express be with you.
+
+  <ul class="contacts">
+  <% for(var i=0; i<contacts.length; i++) {%>
+    <li class="phoneNumber">
+      <span><%= contacts[i].name %></span>
+      <span><%= contacts[i].phoneNumber %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/contacts" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="phone number" name="phoneNumber">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
